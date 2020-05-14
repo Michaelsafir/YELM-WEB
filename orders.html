@@ -24,12 +24,12 @@
             <div class="YELM_header">
                 <div>
                     <img src="images/ios-marketing.png" width="40px" height="40px">
-                    <h2 style="margin-left: 10px;">Yelm.Категории</h2>
+                    <h2 style="margin-left: 10px;">Yelm.Заказы</h2>
                 </div>
             </div>
             <div class="YELM_header_1">
                 <div>
-                    <input type="text" class="form-control" placeholder="Поиск...">
+                    <input type="text" class="form-control" placeholder="Поиск по заказам...">
                 </div>
             </div>
             <div class="YELM_header_2">
@@ -64,13 +64,13 @@
                         </a>
                     </li>
                     <li class="waves-effect">
-                        <a href="catalog.html" class="active">
+                        <a href="catalog.html">
                             <i class="fas fa-list-ul"></i>
                             <span>Каталог</span>
                         </a>
                     </li>
                     <li class="waves-effect">
-                        <a href="#">
+                        <a href="orders.html" class="active">
                             <i class="fas fa-shopping-basket"></i>
                             <span>Заказы из приложения</span>
                         </a>
@@ -89,7 +89,7 @@
                     </li>
                     <li class="menu-title">Настройки</li>
                     <li class="waves-effect">
-                        <a href="theme.html" >
+                        <a href="theme.html">
                             <i class="fas fa-mobile"></i>
                             <span>Тема приложения</span>
                         </a>
@@ -124,69 +124,144 @@
             <div class="page">
                 <div class="top_toolbar">
                     <div>
-                        <h3 class="heading_lk">Категории</h3>
-                        <span class="heading_lk_subtitle gray">Вы можете изменить категории или создать новые</span>
+                        <h3 class="heading_lk">Заказы</h3>
+                        <span class="heading_lk_subtitle gray">Тут Вы можете работать с новыми заказами. Нажмите на заказ и он откроется в правом окошке.</span>
                     </div>
                     <div>
-                        <a href="/create.html"><i class="fas fa-plus"></i></a>
+                        <a class="hide" href="/create.html"><i class="fas fa-plus"></i></a>
                     </div>
                 </div>
-                <div class="catalog">
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle">Название</span>
-                        <span class="catalog_subtitle">Товары</span>
-                        <span class="catalog_subtitle">Состояние</span>
-                        <span class="catalog_subtitle smart_actions_title">Действия</span>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">🥳 Бестселлер</span>
-                        <span class="catalog_subtitle_inside">15 шт.</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                <div class="orders">
+                    <div>
+                        <div>
+                            <div class="orders_header top_border">
+                                <span class="catalog_subtitle">№</span>
+                                <span class="catalog_subtitle">Сосотояние</span>
+                                <span class="catalog_subtitle right">Товары</span>
+                                <span style="opacity: 0;"><i class="fas fa-chevron-right"></i></span>
+                            </div>
+                            <div class="orders_header">
+                                <span class="catalog_subtitle_inside">14302</span>
+                                <span class="catalog_subtitle_inside orange">Новый</span>
+                                <span class="catalog_subtitle_inside thin right">13 шт</span>
+                                <span><i class="fas fa-chevron-right"></i></span>
+                            </div>
+                            <div class="orders_header selected">
+                                <span class="catalog_subtitle_inside">15302</span>
+                                <span class="catalog_subtitle_inside green">Исполнен</span>
+                                <span class="catalog_subtitle_inside thin right">10 шт</span>
+                                <span><i class="fas fa-chevron-right"></i></span>
+                            </div>
+                            <div class="orders_header">
+                                <span class="catalog_subtitle_inside">14352</span>
+                                <span class="catalog_subtitle_inside red">Отказ</span>
+                                <span class="catalog_subtitle_inside thin right">5 шт
+                                </span>
+                                <span><i class="fas fa-chevron-right"></i></span>
+                            </div>
+                            <div class="orders_header">
+                                <span class="catalog_subtitle_inside">14303</span>
+                                <span class="catalog_subtitle_inside orange">Новый</span>
+                                <span class="catalog_subtitle_inside thin right">1 шт</span>
+                                <span><i class="fas fa-chevron-right"></i></span>
+                            </div>
+                            <div class="orders_header">
+                                <span class="catalog_subtitle_inside">14305</span>
+                                <span class="catalog_subtitle_inside orange">Новый</span>
+                                <span class="catalog_subtitle_inside thin right">5 шт</span>
+                                <span><i class="fas fa-chevron-right"></i></span>
+                            </div>
+                            <div class="orders_header">
+                                <span class="catalog_subtitle_inside">14362</span>
+                                <span class="catalog_subtitle_inside orange">Новый</span>
+                                <span class="catalog_subtitle_inside thin right">32 шт</span>
+                                <span><i class="fas fa-chevron-right"></i></span>
+                            </div>
+                            <div class="orders_header">
+                                <span class="catalog_subtitle_inside">14362</span>
+                                <span class="catalog_subtitle_inside orange">Новый</span>
+                                <span class="catalog_subtitle_inside thin right">9 шт</span>
+                                <span><i class="fas fa-chevron-right"></i></span>
+                            </div>
+                            <div class="orders_header bottom_border">
+                                <span class="catalog_subtitle_inside">13302</span>
+                                <span class="catalog_subtitle_inside orange">Новый</span>
+                                <span class="catalog_subtitle_inside thin right">5 шт</span>
+                                <span><i class="fas fa-chevron-right"></i></span>
+                            </div>
                         </div>
                     </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">🆕 Новинки</span>
-                        <span class="catalog_subtitle_inside">5 шт.</span>
-                        <span class="catalog_subtitle_inside red">Скрыто</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                    <!-- Template to see items in order -->
+                    <div>
+                        <div class="catalog_subtitle_accrodion">
+                            <span class="catalog_subtitle">Информация по заказу</span>
+                            <a class="fix_a"><i class="fas fa-chevron-down gray"></i></a>
+                            <a></a>
+                        </div>
+                        <div class="order_info">
+                            <span class="heading_lk_subtitle">Дата заказа: 21.03.2020</span>
+                            <span class="heading_lk_subtitle">Общаяя сумма: 13120.00 рублей</span>
+                            <span class="heading_lk_subtitle">Адрес доставки: Ул Миклухо-Маклая д21, к1</span>
+                            <span class="heading_lk_subtitle">Номер телефона: 79998394668</span>
+                            <span class="heading_lk_subtitle">ФИО: Сафир Михаил Дмитриевич</span>
+                            <span class="heading_lk_subtitle">Дополнительно: Как можно скорее!</span>
+                            <span class="heading_lk_subtitle">Статус:
+                                <span class="heading_lk_subtitle green inline">Исполнен</span>
+                                <a href="#" class=""><i class="fas fa-edit gray"></i></a>
+                            </span>
+                        </div>
+                        <span class="catalog_subtitle">Товары (10 шт)</span>
+                        <div class="order">
+                            <div class="order_image">
+                                <img src="images/cream3.png" class="center">
+                                <span  class="center">
+                                    ₽ 5187.90
+                                </span>
+                            </div>
+                            <div class="order_text">
+                                <span class="thin">
+                                    Lebelage Увлажняющий крем для рук с экстрактом персика Daily Moisturizing Peach Hand Cream <br>100 мл
+                                    <span class="gray thin price_about">₽ 399.90 / 1 шт.</span>
+                                    <span class="thin price_about">Добавлено 13 шт.</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="order">
+                            <div class="order_image">
+                                <img src="images/cream2.png" class="center">
+                                <span  class="center">
+                                    ₽ 2587.90
+                                </span>
+                            </div>
+                            <div class="order_text">
+                                <span class="thin">
+                                    FarmStay Крем для рук с маслом ши и авокадо Tropical Fruit Hand Cream Avocado and Shea Butter <br>50мл
+                                    <span class="gray thin price_about">₽ 599.00 / 1 шт.</span>
+                                    <span class="thin price_about">Добавлено 6 шт.</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="order">
+                            <div class="order_image">
+                                <img src="images/cream4.png" class="center">
+                                <span  class="center">
+                                    ₽ 1095.90
+                                </span>
+                            </div>
+                            <div class="order_text">
+                                <span class="thin">
+                                    Deoproce Крем для рук и тела с экстрактом ласточкиного гнезда Swallow's Nest Marine Therapy <br>100 мл
+                                    <span class="gray thin price_about">₽ 199.00 / 1 шт.</span>
+                                    <span class="thin price_about">Добавлено 3 шт.</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="catalog_subtitle">Дополнительные действия</span>
+                        <div class="order_info_lastchild">
+                            <a href="#" class="heading_lk_subtitle blue"><i class="fas fa-edit"></i>Удалить</a>
+                            <a href="#" class="heading_lk_subtitle orange"><i class="fas fa-trash"></i> В Архив</a>
                         </div>
                     </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">👒 Бренды</span>
-                        <span class="catalog_subtitle_inside">8 шт.</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">👩‍🦰 Уход за лицом</span>
-                        <span class="catalog_subtitle_inside">3 шт.</span>
-                        <span class="catalog_subtitle_inside orange">Черновик</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-
-
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">💆‍♀️ Для волос</span>
-                        <span class="catalog_subtitle_inside">16 шт.</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-
                 </div>
                 <div class="pagination hide">
                     <div>
