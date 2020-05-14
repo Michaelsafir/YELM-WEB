@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>YELM.io Admin</title>
+    <!-- Add  jquery link-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="shortcut icon" href="images/ios-marketing.ico" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/SanFrancisco/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Fast Style Change -->
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <!-- To DO Create Grid with header / toolbar / mainPage -->
+    <header>
+        <div class="header">
+            <div class="YELM_header">
+                <div>
+                    <img src="images/ios-marketing.png" width="40px" height="40px">
+                    <h2 style="margin-left: 10px;">Yelm.Товары</h2>
+                </div>
+            </div>
+            <div class="YELM_header_1">
+                <div>
+                    <input type="text" class="form-control" placeholder="Поиск...">
+                </div>
+            </div>
+            <div class="YELM_header_2">
+                <div>
+                    <a href="#" class="gray">Сафир Михаил Дмитриевич</a>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="app">
+            <div class="leftbar">
+                <ul class="metismenu list-unstyled" id="side-menu">
+                    <li class="menu-title">Основное</li>
+                    <li class="waves-effect">
+                        <a href="index.html">
+                            <i class="far fa-chart-bar"></i>
+                            <span>Аналитика</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="news.html">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Новости</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="items.html" class="active">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Товары</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="catalog.html">
+                            <i class="fas fa-list-ul"></i>
+                            <span>Каталог</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#">
+                            <i class="fas fa-shopping-basket"></i>
+                            <span>Заказы из приложения</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="company.html">
+                            <i class="fas fa-address-card"></i>
+                            <span>Данные о Вас</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="galery.html">
+                            <i class="fas fa-images"></i>
+                            <span>Галерея</span>
+                        </a>
+                    </li>
+                    <li class="menu-title">Настройки</li>
+                    <li class="waves-effect">
+                        <a href="theme.html" >
+                            <i class="fas fa-mobile"></i>
+                            <span>Тема приложения</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="push.html">
+                            <i class="fas fa-user-clock"></i>
+                            <span>Отправить уведомление</span>
+                        </a>
+                    </li>
+                    <li class="menu-title">Как пользоваться</li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>Инструкция (Скоро)</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>Форум (Скоро)</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>FAQ (Скоро)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page">
+                <div class="top_toolbar">
+                    <div>
+                        <h3 class="heading_lk">Список Товаров</h3>
+                        <span class="heading_lk_subtitle gray">Для редактирования или удаления товара нажмите на него</span>
+                    </div>
+                    <div>
+                        <a href="/create.html"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <img src="images/item2.jpg" width="100%" height="250px">
+                        <div>
+                            <span class="category gray">Чай №2, Радость</span>
+                            <span class="subtitle gray uppercase">Категория <i class="fas fa-chevron-right"></i>Чаи</span>
+                            <span class="subtitle gray uppercase">Создан <i class="fas fa-chevron-right"></i>21.12.2020</span>
+                            <span class="subtitle gray uppercase">Состояние <i class="fas fa-chevron-right"></i><span class="green">В ротации</span></span>
+                            <span class="subtitle gray uppercase">Артикул <i class="fas fa-chevron-right"></i> A45B12Y</span>
+                            <span class="title">500 ₽</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/item2.jpg" width="100%" height="250px">
+                        <div>
+                            <span class="category gray">Чай №2, Радость</span>
+                            <span class="subtitle gray uppercase">Категория <i class="fas fa-chevron-right"></i>Чаи</span>
+                            <span class="subtitle gray uppercase">Создан <i class="fas fa-chevron-right"></i>21.12.2020</span>
+                            <span class="subtitle gray uppercase">Состояние <i class="fas fa-chevron-right"></i><span class="orange">Отключен</span></span>
+                            <span class="subtitle gray uppercase">Артикул <i class="fas fa-chevron-right"></i> A45B12Y</span>
+                            <span class="title">500 ₽</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/item2.jpg" width="100%" height="250px">
+                        <div>
+                            <span class="category gray">Чай №2, Радость</span>
+                            <span class="subtitle gray uppercase">Категория <i class="fas fa-chevron-right"></i>Чаи</span>
+                            <span class="subtitle gray uppercase">Создан <i class="fas fa-chevron-right"></i>21.12.2020</span>
+                            <span class="subtitle gray uppercase">Состояние <i class="fas fa-chevron-right"></i><span class="red">ЗАКОНЧИЛСЯ</span></span>
+                            <span class="subtitle gray uppercase">Артикул <i class="fas fa-chevron-right"></i> A45B12Y</span>
+                            <span class="title">500 ₽</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/item2.jpg" width="100%" height="250px">
+                        <div>
+                            <span class="category gray">Чай №2, Радость</span>
+                            <span class="subtitle gray uppercase">Категория <i class="fas fa-chevron-right"></i>Чаи</span>
+                            <span class="subtitle gray uppercase">Создан <i class="fas fa-chevron-right"></i>21.12.2020</span>
+                            <span class="subtitle gray uppercase">Состояние <i class="fas fa-chevron-right"></i><span class="red">Закончился</span></span>
+                            <span class="subtitle gray uppercase">Артикул <i class="fas fa-chevron-right"></i> A45B12Y</span>
+                            <span class="title">500 ₽</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/item2.jpg" width="100%" height="250px">
+                        <div>
+                            <span class="category gray">Чай №2, Радость</span>
+                            <span class="subtitle gray uppercase">Категория <i class="fas fa-chevron-right"></i>Чаи</span>
+                            <span class="subtitle gray uppercase">Создан <i class="fas fa-chevron-right"></i>21.12.2020</span>
+                            <span class="subtitle gray uppercase">Состояние <i class="fas fa-chevron-right"></i><span class="green">В ротации</span></span>
+                            <span class="subtitle gray uppercase">Артикул <i class="fas fa-chevron-right"></i> A45B12Y</span>
+                            <span class="title">500 ₽</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <div>
+                        <a href="">Загрузить еще</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h4>Разработно с ❤️</h4>
+            <h4>Yelm.io 2020</h4>
+            <a href="https://yelm.io">Правовая информация</a>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="script/app.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/fontawesome/js/all.js">
+
+</html>

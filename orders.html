@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>YELM.io Admin</title>
+    <!-- Add  jquery link-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="shortcut icon" href="images/ios-marketing.ico" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/SanFrancisco/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Fast Style Change -->
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <!-- To DO Create Grid with header / toolbar / mainPage -->
+    <header>
+        <div class="header">
+            <div class="YELM_header">
+                <div>
+                    <img src="images/ios-marketing.png" width="40px" height="40px">
+                    <h2 style="margin-left: 10px;">Yelm.Категории</h2>
+                </div>
+            </div>
+            <div class="YELM_header_1">
+                <div>
+                    <input type="text" class="form-control" placeholder="Поиск...">
+                </div>
+            </div>
+            <div class="YELM_header_2">
+                <div>
+                    <a href="#" class="gray">Сафир Михаил Дмитриевич</a>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="app">
+            <div class="leftbar">
+                <ul class="metismenu list-unstyled" id="side-menu">
+                    <li class="menu-title">Основное</li>
+                    <li class="waves-effect">
+                        <a href="index.html">
+                            <i class="far fa-chart-bar"></i>
+                            <span>Аналитика</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="news.html">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Новости</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="items.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Товары</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="catalog.html" class="active">
+                            <i class="fas fa-list-ul"></i>
+                            <span>Каталог</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#">
+                            <i class="fas fa-shopping-basket"></i>
+                            <span>Заказы из приложения</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="company.html">
+                            <i class="fas fa-address-card"></i>
+                            <span>Данные о Вас</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="galery.html">
+                            <i class="fas fa-images"></i>
+                            <span>Галерея</span>
+                        </a>
+                    </li>
+                    <li class="menu-title">Настройки</li>
+                    <li class="waves-effect">
+                        <a href="theme.html" >
+                            <i class="fas fa-mobile"></i>
+                            <span>Тема приложения</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="push.html">
+                            <i class="fas fa-user-clock"></i>
+                            <span>Отправить уведомление</span>
+                        </a>
+                    </li>
+                    <li class="menu-title">Как пользоваться</li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>Инструкция (Скоро)</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>Форум (Скоро)</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>FAQ (Скоро)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page">
+                <div class="top_toolbar">
+                    <div>
+                        <h3 class="heading_lk">Категории</h3>
+                        <span class="heading_lk_subtitle gray">Вы можете изменить категории или создать новые</span>
+                    </div>
+                    <div>
+                        <a href="/create.html"><i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+                <div class="catalog">
+                    <div class="catalog_item">
+                        <span class="catalog_subtitle">Название</span>
+                        <span class="catalog_subtitle">Товары</span>
+                        <span class="catalog_subtitle">Состояние</span>
+                        <span class="catalog_subtitle smart_actions_title">Действия</span>
+                    </div>
+                    <div class="catalog_item">
+                        <span class="catalog_subtitle_inside">🥳 Бестселлер</span>
+                        <span class="catalog_subtitle_inside">15 шт.</span>
+                        <span class="catalog_subtitle_inside green">В Ротации</span>
+                        <div class="smart_actions smart_actions_title">
+                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div class="catalog_item">
+                        <span class="catalog_subtitle_inside">🆕 Новинки</span>
+                        <span class="catalog_subtitle_inside">5 шт.</span>
+                        <span class="catalog_subtitle_inside red">Скрыто</span>
+                        <div class="smart_actions smart_actions_title">
+                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+                    <div class="catalog_item">
+                        <span class="catalog_subtitle_inside">👒 Бренды</span>
+                        <span class="catalog_subtitle_inside">8 шт.</span>
+                        <span class="catalog_subtitle_inside green">В Ротации</span>
+                        <div class="smart_actions smart_actions_title">
+                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="catalog_item">
+                        <span class="catalog_subtitle_inside">👩‍🦰 Уход за лицом</span>
+                        <span class="catalog_subtitle_inside">3 шт.</span>
+                        <span class="catalog_subtitle_inside orange">Черновик</span>
+                        <div class="smart_actions smart_actions_title">
+                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+
+
+                    <div class="catalog_item">
+                        <span class="catalog_subtitle_inside">💆‍♀️ Для волос</span>
+                        <span class="catalog_subtitle_inside">16 шт.</span>
+                        <span class="catalog_subtitle_inside green">В Ротации</span>
+                        <div class="smart_actions smart_actions_title">
+                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pagination hide">
+                    <div>
+                        <a href="">Загрузить еще</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h4>Разработно с ❤️</h4>
+            <h4>Yelm.io 2020</h4>
+            <a href="https://yelm.io">Правовая информация</a>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="script/app.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/fontawesome/js/all.js">
+
+</html>

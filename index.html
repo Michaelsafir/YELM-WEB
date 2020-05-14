@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>YELM.io Admin</title>
+    <!-- Add  jquery link-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="shortcut icon" href="images/ios-marketing.ico" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/SanFrancisco/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Fast Style Change -->
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <!-- To DO Create Grid with header / toolbar / mainPage -->
+    <header>
+        <div class="header">
+            <div class="YELM_header">
+                <div>
+                    <img src="images/ios-marketing.png" width="40px" height="40px">
+                    <h2 style="margin-left: 10px;">Yelm.Аналитика</h2>
+                </div>
+            </div>
+            <div class="YELM_header_1">
+            	<div>
+            		<input type="text" class="form-control" placeholder="Поиск...">
+            	</div>
+            </div>
+            <div class="YELM_header_2">
+            	<div>
+            		<a href="#" class="gray">Сафир Михаил Дмитриевич</a>
+            		<i class="fas fa-chevron-down"></i>
+            	</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="app">
+            <div class="leftbar">
+                <ul class="metismenu list-unstyled" id="side-menu">
+                    <li class="menu-title">Основное</li>
+                    <li class="waves-effect">
+                        <a href="index.html" class="active">
+                            <i class="far fa-chart-bar"></i>
+                            <span>Аналитика</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="news.html">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Новости</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="items.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Товары</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="catalog.html">
+                            <i class="fas fa-list-ul"></i>
+                            <span>Каталог</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#">
+                            <i class="fas fa-shopping-basket"></i>
+                            <span>Заказы из приложения</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="company.html">
+                            <i class="fas fa-address-card"></i>
+                            <span>Данные о Вас</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="galery.html">
+                            <i class="fas fa-images"></i>
+                            <span>Галерея</span>
+                        </a>
+                    </li>
+                    <li class="menu-title">Настройки</li>
+                    <li class="waves-effect">
+                        <a href="theme.html" >
+                            <i class="fas fa-mobile"></i>
+                            <span>Тема приложения</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="push.html">
+                            <i class="fas fa-user-clock"></i>
+                            <span>Отправить уведомление</span>
+                        </a>
+                    </li>
+                    <li class="menu-title">Как пользоваться</li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>Инструкция (Скоро)</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>Форум (Скоро)</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>FAQ (Скоро)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page">
+            	<h3 class="heading_lk">Статистика приложения</h3>
+            	<canvas id="chartjs-0" class="chartjs" height="350" style="display: block; height: 350px; width: 100%;"></canvas>
+            	<h3 class="heading_lk" style="margin-top: 20px">Точные данные</h3>
+            	<div class="display_two_columns">
+            		<div class="show_list">
+            			<div class="list_line">
+            				<span class="gray"> Сегодня сессий </span>
+            				<span> 54 <span>
+            			</div>
+
+            			<div class="list_line">
+            				<span class="gray"> Установок приложения </span>
+            				<span> 416 <span>
+            			</div>
+
+            			<div class="list_line">
+            				<span class="gray"> Разрешили уведомления </span>
+            				<span> 148 <span>
+            			</div>
+
+            			<div class="list_line">
+            				<span class="gray"> Посещений за неделю </span>
+            				<span> 1,480 <span>
+            			</div>
+
+            			<div class="list_line">
+            				<span class="gray"> Всего посещений </span>
+            				<span> 148,000 <span>
+            			</div>
+
+            		</div>
+            		<div></div>
+            		<div class="show_list">
+            			<div class="list_line">
+            				<span class="gray"> Количество статей </span>
+            				<span> 540 <span>
+            			</div>
+
+            			<div class="list_line">
+            				<span class="gray"> Покупок было всего </span>
+            				<span> 416 <span>
+            			</div>
+
+            			<div class="list_line">
+            				<span class="gray"> Количество заказов сегодня </span>
+            				<span> 48 <span>
+            			</div>
+
+            			
+            		</div>
+            	</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h4>Разработно с ❤️</h4>
+            <h4>Yelm.io 2020</h4>
+            <a href="https://yelm.io">Правовая информация</a>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="script/app.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/fontawesome/js/all.js">
+
+</html>
