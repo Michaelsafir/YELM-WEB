@@ -160,16 +160,16 @@
         <span class="catalog_subtitle">Добавление новой категории</span>
         <span class="heading_lk_subtitle gray" style="margin: 0; padding-top: 0 !important;">Заполните название и состояние категории для дальнейшего прикрепления к товарам.</span>
         <span class="catalog_subtitle">Название</span>
-        <input type="text" class="form-control push_title input_fly" placeholder="Название категории">
+        <input type="text" class="form-control push_title input_fly add_category_name" placeholder="Название категории">
         <span class="catalog_subtitle">Состояние</span>
-        <select class="input_fly push_title gray">
-            <option>В Ротации</option>
-            <option>Скрыто</option>
-            <option>Черновик</option>
+        <select class="input_fly push_title gray add_category_type">
+            <option value="1">В Ротации</option>
+            <option value="2">Скрыто</option>
+            <option value="3">Черновик</option>
         </select>
         <div class="save_button">
             <div>
-                <a href="">Добавить</a>
+                <a onclick="create_category()">Добавить</a>
             </div>
         </div>
     </div>
@@ -186,7 +186,7 @@
         </select>
         <div class="save_button">
             <div>
-                <a href="">Сохранить</a>
+                <a onclick="save_category()">Сохранить</a>
             </div>
         </div>
     </div>
