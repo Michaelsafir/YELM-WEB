@@ -1,0 +1,88 @@
+.login {
+    min-height: 250px;
+    width: 400px;
+    position: relative;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #d9d9d9,
+        -20px -20px 60px #ffffff;
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+body {
+    background-color: var(--page-header-color, #ffffff);
+    vertical-align: middle;
+}
+
+* {
+    margin: auto !important;
+}
+
+input, span{
+	margin: 0 !important;
+}
+
+.login{
+	text-align: left !important;
+	padding: 20px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 15px;
+	justify-content: left;
+}
+
+.header_login{
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-content: center;
+	grid-row-gap: 20px;
+	margin-bottom: 40px !important;
+}
+
+.header_login img{
+	border-radius: 10px;
+}
+
+.pagination{
+	margin: 0 !important;
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+}
+
+.pagination >div{
+	margin: 0 !important;
+}
+
+
+.pagination a{
+	width: 90% !important;
+    display: block;
+    padding: 10px 40px;
+}
+
+.pagination a:hover{
+	padding: 10px 40px;
+}
+
+
+
+
+
+
+
+
+

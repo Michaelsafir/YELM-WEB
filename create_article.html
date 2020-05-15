@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>YELM.io Admin</title>
+    <!-- Add  jquery link-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <link rel="shortcut icon" href="images/ios-marketing.ico" type="image/x-icon">
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="fonts/SanFrancisco/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <!-- Fast Style Change -->
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+    <!-- To DO Create Grid with header / toolbar / mainPage -->
+    <header>
+        <div class="header">
+            <div class="YELM_header">
+                <div>
+                    <img src="images/ios-marketing.png" width="40px" height="40px">
+                    <h2 style="margin-left: 10px;">Yelm.Новости</h2>
+                </div>
+            </div>
+            <div class="YELM_header_1">
+                <div>
+                    <input type="text" class="form-control" placeholder="Поиск...">
+                </div>
+            </div>
+            <div class="YELM_header_2">
+                <div>
+                    <a href="#" class="gray">Сафир Михаил Дмитриевич</a>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="app">
+            <div class="leftbar">
+                <ul class="metismenu list-unstyled" id="side-menu">
+                    <li class="menu-title">Основное</li>
+                    <li class="waves-effect">
+                        <a href="index.html">
+                            <i class="far fa-chart-bar"></i>
+                            <span>Аналитика</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="news.html" class="active">
+                            <i class="fas fa-newspaper"></i>
+                            <span>Новости</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="items.html">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span>Товары</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="catalog.html">
+                            <i class="fas fa-list-ul"></i>
+                            <span>Каталог</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="orders.html">
+                            <i class="fas fa-shopping-basket"></i>
+                            <span>Заказы из приложения</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="company.html">
+                            <i class="fas fa-address-card"></i>
+                            <span>Данные о Вас</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="galery.html">
+                            <i class="fas fa-images"></i>
+                            <span>Галерея</span>
+                        </a>
+                    </li>
+                    <li class="menu-title">Настройки</li>
+                    <li class="waves-effect">
+                        <a href="theme.html">
+                            <i class="fas fa-mobile"></i>
+                            <span>Тема приложения</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="push.html">
+                            <i class="fas fa-user-clock"></i>
+                            <span>Отправить уведомление</span>
+                        </a>
+                    </li>
+                    <li class="menu-title">Как пользоваться</li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>Инструкция (Скоро)</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>Форум (Скоро)</span>
+                        </a>
+                    </li>
+                    <li class="waves-effect">
+                        <a href="#" class="gray">
+                            <i class="fas fa-link"></i>
+                            <span>FAQ (Скоро)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="page">
+                <div class="top_toolbar">
+                    <div>
+                        <h3 class="heading_lk">Создать новость</h3>
+                        <span class="heading_lk_subtitle gray">Заполните всю информацию по статье и опубликуйте в свое приложение!</span>
+                    </div>
+                    <div>
+                        <a class="save_item"><i class="far fa-check-circle"></i> Сохранить</a>
+                    </div>
+                </div>
+                <div class="add_item">
+                    <div>
+                        <span class="catalog_subtitle">Название</span>
+                        <input type="text" class="form-control push_title input_fly" placeholder="Заголовок">
+                        <span class="catalog_subtitle">Подзаголовок</span>
+                        <input type="text" class="form-control push_title input_fly" placeholder="Подзаголовок">
+                        <span class="catalog_subtitle">Тема (Над названием)</span>
+                        <input type="text" class="form-control push_title input_fly" placeholder="Ваша тема">
+                        <div class="characteristics">
+                            <span class="catalog_subtitle">Фотографии</span>
+                            <a><i class="fas fa-plus gray"></i></a>
+                        </div>
+                        <span class="heading_lk_subtitle gray" style="margin: 0;">Первая фотография будет на главной странице. Остальные будут вложены в статью.</span>
+                        <div class="item_images">
+                            <div class="content_image_item">
+                                <img src="images/cream2.png">
+                                <div class="overlay_item">
+                                    <div class="text_item">
+                                        <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content_image_item">
+                                <img src="images/cream3.png">
+                                <div class="overlay_item">
+                                    <div class="text_item">
+                                        <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content_image_item">
+                                <img src="images/cream4.png">
+                                <div class="overlay_item">
+                                    <div class="text_item">
+                                        <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="catalog_subtitle">Действие</span>
+                        <div class="article_type">
+                            <button class="item_one_type pushed">Открыть статью</button>
+                            <button class="item_three_type">Ссылка</button>
+                        </div>
+                        <input type="text" class="form-control push_title input_fly hide" placeholder="Вставьте ссылку">
+                        <span class="catalog_subtitle ">Новость <span class="thin">(0/512)</span></span>
+                        <textarea class="push_textarea input_fly " placeholder="Ваш текст для статьи"></textarea>
+                        <span class="catalog_subtitle">Статус</span>
+                        <div class="article_type">
+                            <button class="item_one_type pushed">Черновик</button>
+                            <button class="item_three_type">В Ротации</button>
+                        </div>
+                    </div>
+                    <div class="item_preview">
+                        <div class="preview">
+                            <div class="preview_images">
+                                <img src="images/solo.jpg">
+                            </div>
+                            <div class="preview_text">
+                                <h3 class="heading_lk">Ваше приглашение в премиум-класс</h3>
+                                <div class="item_text_preview">
+                                    <span class="heading_lk_subtitle gray">Приобщайтесь к здоровому питанию вместе с Solo YOU — первой в России программе класса «доступный премиум». Это выверенный до мелочей сбалансированный рацион от известного диетолога Маргариты Королевой. Помогает снизить лишний вес и поддерживать форму.</span>
+                                    <span class="heading_lk_subtitle gray">Вы насладитесь яркими салатами, супами, мясными и рыбными блюдами, легкими десертами. Вместе с ежедневным набором вас ждет первоклассное обслуживание и гибкая бесплатная доставка.</span>
+                                    <span class="heading_lk_subtitle gray">Мы разработали универсальное меню для разнообразного полноценного питания. В течение 12 дней ни одно блюдо в программе не повторяется.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                   <!--  <div class="preview_notallow">
+                        <div class="not_allow">
+                            <div>
+                                <i class="far fa-eye-slash"></i>
+                                <span class="heading_lk_subtitle">Воспроизведение недоступно</span>
+                                <span class="heading_lk_subtitle gray">Некоторые сервисы не позволяют делать предпросмотр их сайтов.</span>
+                                <br>
+                                <span class="heading_lk_subtitle gray">При нажатии на статью пользователю будет открыта страница, которую Вы указали в поле Ссылка.</span>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer">
+            <h4>Разработно с ❤️</h4>
+            <h4>Yelm.io 2020</h4>
+            <a href="https://yelm.io">Правовая информация</a>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="script/app.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/fontawesome/js/all.js">
+
+</html>
