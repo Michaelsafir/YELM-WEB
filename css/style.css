@@ -170,8 +170,8 @@ button:focus {
         inset -20px -20px 60px #ffffff;*/
 }
 
-select{
-     border: none;
+select {
+    border: none;
     height: 38px;
     padding-left: 20px;
     padding-right: 20px;
@@ -1054,10 +1054,12 @@ footer {
 }
 
 
-.param span, i {
+.param span,
+i {
     padding: 5px 10px;
     display: block;
 }
+
 .param i {
     margin-top: 5px;
 }
@@ -1164,8 +1166,8 @@ footer {
     border: 1px solid rgba(240, 240, 243, 0.8);
 }
 
-.article_type button{
-     width: 100%;
+.article_type button {
+    width: 100%;
     margin: 0 !important;
     padding: 0 !important;
     height: 38px;
@@ -1201,7 +1203,7 @@ footer {
         -20px -20px 60px #ffffff;
 }
 
-.not_allow{
+.not_allow {
     position: relative;
     width: 350px;
     height: 600px;
@@ -1213,7 +1215,7 @@ footer {
         -20px -20px 60px #ffffff;
 }
 
-.not_allow >div{
+.not_allow>div {
     padding: 20px;
     text-align: center;
     position: absolute;
@@ -1288,3 +1290,32 @@ footer {
     align-self: center;
     margin-left: 20px;
 }
+
+
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+
+    display: grid;
+    grid-row-gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

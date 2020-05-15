@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="fonts/SanFrancisco/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/popup.css">
+    <script type="text/javascript" src="script/jquery.js"></script>
     <!-- Fast Style Change -->
     <style type="text/css">
     </style>
@@ -89,7 +91,7 @@
                     </li>
                     <li class="menu-title">Настройки</li>
                     <li class="waves-effect">
-                        <a href="theme.html" >
+                        <a href="theme.html">
                             <i class="fas fa-mobile"></i>
                             <span>Тема приложения</span>
                         </a>
@@ -128,7 +130,7 @@
                         <span class="heading_lk_subtitle gray">Вы можете изменить категории или создать новые</span>
                     </div>
                     <div>
-                        <a href="/create.html"><i class="fas fa-plus"></i></a>
+                        <a href="#test-popup" class="open-popup-link" ><i class="fas fa-plus"></i></a>
                     </div>
                 </div>
                 <div class="catalog">
@@ -165,7 +167,6 @@
                             <a href="#" class="red"><i class="fas fa-trash"></i></a>
                         </div>
                     </div>
-
                     <div class="catalog_item">
                         <span class="catalog_subtitle_inside">👩‍🦰 Уход за лицом</span>
                         <span class="catalog_subtitle_inside">3 шт.</span>
@@ -175,18 +176,15 @@
                             <a href="#" class="red"><i class="fas fa-trash"></i></a>
                         </div>
                     </div>
-
-
                     <div class="catalog_item">
                         <span class="catalog_subtitle_inside">💆‍♀️ Для волос</span>
                         <span class="catalog_subtitle_inside">16 шт.</span>
                         <span class="catalog_subtitle_inside green">В Ротации</span>
                         <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
+                            <a href="#test-popup" class="open-popup-link blue"><i class="fas fa-edit"></i></a>
                             <a href="#" class="red"><i class="fas fa-trash"></i></a>
                         </div>
                     </div>
-
                 </div>
                 <div class="pagination hide">
                     <div>
@@ -203,9 +201,34 @@
             <a href="https://yelm.io">Правовая информация</a>
         </div>
     </footer>
+    <div id="test-popup" class="white-popup mfp-hide">
+
+        <span class="catalog_subtitle">Добавление новой категории</span>
+        <span class="heading_lk_subtitle gray" style="margin: 0; padding-top: 0 !important;">Заполните название и состояние категории для дальнейшего прикрепления к товарам.</span>
+        <span class="catalog_subtitle">Название</span>
+        <input type="text" class="form-control push_title input_fly" placeholder="Название категории">
+        <span class="catalog_subtitle">Состояние</span>
+        <select class="input_fly push_title gray">
+            <option>В Ротации</option>
+            <option>Скрыто</option>
+            <option>Черновик</option>
+        </select>
+    </div>
 </body>
 <script type="text/javascript" src="script/app.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script type="text/javascript" src="script/popup.js"></script>
 <link rel="stylesheet" type="text/css" href="css/fontawesome/js/all.js">
+<script type="text/javascript">
+$(document).ready(function() {
+
+
+    $('.open-popup-link').magnificPopup({
+        type: 'inline',
+        midClick: true
+    });
+
+});
+</script>
 
 </html>
