@@ -1306,6 +1306,47 @@ i {
 }
 
 
+.save_button {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.save_button a {
+    padding: 15px 40px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 20px 20px 60px #d9d9d9,
+        -20px -20px 60px #ffffff;
+}
+
+.save_button a:hover {
+    padding: 15px 40px;
+    border-radius: 10px;
+    background: #ffffff;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow: 20px 20px 60px #d9d9d9,
+        -20px -20px 60px #ffffff;
+}
+
+.save_button{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+
+.save_button a{
+    width: 100% !important;
+    display: block;
+    padding: 10px 40px;
+}
+
+.save_button a:hover{
+    padding: 10px 40px;
+}
 
 
 

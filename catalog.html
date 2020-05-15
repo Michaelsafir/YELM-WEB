@@ -130,7 +130,7 @@
                         <span class="heading_lk_subtitle gray">Вы можете изменить категории или создать новые</span>
                     </div>
                     <div>
-                        <a href="#test-popup" class="open-popup-link" ><i class="fas fa-plus"></i></a>
+                        <a href="#add-popup" class="open-popup-link"><i class="fas fa-plus"></i></a>
                     </div>
                 </div>
                 <div class="catalog">
@@ -139,51 +139,6 @@
                         <span class="catalog_subtitle">Товары</span>
                         <span class="catalog_subtitle">Состояние</span>
                         <span class="catalog_subtitle smart_actions_title">Действия</span>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">🥳 Бестселлер</span>
-                        <span class="catalog_subtitle_inside">15 шт.</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">🆕 Новинки</span>
-                        <span class="catalog_subtitle_inside">5 шт.</span>
-                        <span class="catalog_subtitle_inside red">Скрыто</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">👒 Бренды</span>
-                        <span class="catalog_subtitle_inside">8 шт.</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">👩‍🦰 Уход за лицом</span>
-                        <span class="catalog_subtitle_inside">3 шт.</span>
-                        <span class="catalog_subtitle_inside orange">Черновик</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">💆‍♀️ Для волос</span>
-                        <span class="catalog_subtitle_inside">16 шт.</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#test-popup" class="open-popup-link blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
                     </div>
                 </div>
                 <div class="pagination hide">
@@ -201,8 +156,7 @@
             <a href="https://yelm.io">Правовая информация</a>
         </div>
     </footer>
-    <div id="test-popup" class="white-popup mfp-hide">
-
+    <div id="add-popup" class="white-popup mfp-hide">
         <span class="catalog_subtitle">Добавление новой категории</span>
         <span class="heading_lk_subtitle gray" style="margin: 0; padding-top: 0 !important;">Заполните название и состояние категории для дальнейшего прикрепления к товарам.</span>
         <span class="catalog_subtitle">Название</span>
@@ -213,6 +167,28 @@
             <option>Скрыто</option>
             <option>Черновик</option>
         </select>
+        <div class="save_button">
+            <div>
+                <a href="">Добавить</a>
+            </div>
+        </div>
+    </div>
+    <div id="change-popup" class="white-popup mfp-hide">
+        <span class="catalog_subtitle">Изменить категорию</span>
+        <span class="heading_lk_subtitle gray" style="margin: 0; padding-top: 0 !important;">Заполните название и состояние категории для дальнейшего прикрепления к товарам.</span>
+        <span class="catalog_subtitle">Название</span>
+        <input type="text" class="form-control push_title input_fly change_category_name" placeholder="Название категории">
+        <span class="catalog_subtitle">Состояние</span>
+        <select class="input_fly push_title gray change_category_type">
+            <option value="1">В Ротации</option>
+            <option value="2">Скрыто</option>
+            <option value="3">Черновик</option>
+        </select>
+        <div class="save_button">
+            <div>
+                <a href="">Сохранить</a>
+            </div>
+        </div>
     </div>
 </body>
 <script type="text/javascript" src="script/app.js"></script>
@@ -222,13 +198,19 @@
 <script type="text/javascript">
 $(document).ready(function() {
 
+    get_categories(platform)
+
+});
+
+
+function maginific() {
 
     $('.open-popup-link').magnificPopup({
         type: 'inline',
         midClick: true
     });
 
-});
+}
 </script>
 
 </html>
