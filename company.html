@@ -36,7 +36,7 @@
             </div>
             <div class="YELM_header_2">
                 <div>
-                    <a href="#" class="gray">Сафир Михаил Дмитриевич</a>
+                    <a href="#" class="gray username">Сафир Михаил Дмитриевич</a>
                     <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
@@ -133,49 +133,15 @@
                         <a href="#test-popup" class="open-popup-link"><i class="fas fa-plus"></i></a>
                     </div>
                 </div>
-                <div class="catalog">
+                <div class="catalog first_block">
                     <div class="catalog_item">
                         <span class="catalog_subtitle">Название</span>
                         <span class="catalog_subtitle">Ссылка</span>
                         <span class="catalog_subtitle">Состояние</span>
                         <span class="catalog_subtitle smart_actions_title">Действия</span>
                     </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside"><i class="fas fa-phone"></i>Звонок в компанию</span>
-                        <span class="catalog_subtitle_inside thin">79998394668</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside"><i class="fab fa-instagram"></i>Instagram</span>
-                        <span class="catalog_subtitle_inside thin">@yelm.io</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside"><i class="far fa-comment"></i>Чат в Whatsapp</span>
-                        <span class="catalog_subtitle_inside thin">79998394668</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside"><i class="fas fa-link"></i>Наш сайт</span>
-                        <span class="catalog_subtitle_inside thin">https://yelm.io</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                        </div>
-                    </div>
+
+                    <div class="loader">Loading...</div>
                 </div>
                 <div class="top_toolbar">
                     <div>
@@ -237,24 +203,49 @@
         <span class="catalog_subtitle">Добавление способа связи</span>
         <span class="heading_lk_subtitle gray" style="margin: 0; padding-top: 0 !important;">Заполните название и способ связи для отображения этих данных в приложении.</span>
         <span class="catalog_subtitle">Выберете способ</span>
-        <select class="input_fly push_title gray">
-            <option>Телефон</option>
+        <select class="input_fly push_title gray add_company_name">
+            <option>Позвонить</option>
             <option>Whatsapp</option>
             <option>Почта</option>
             <option>Instagram</option>
             <option>Сайт</option>
         </select>
         <span class="catalog_subtitle">Контент</span>
-        <input type="text" class="form-control push_title input_fly" placeholder="Телефон / Ссылка / Почта">
+        <input type="text" class="form-control push_title input_fly add_company_content" placeholder="Телефон / Ссылка / Почта">
         <span class="catalog_subtitle">Состояние</span>
-        <select class="input_fly push_title gray">
-            <option>В Ротации</option>
-            <option>Скрыто</option>
-            <option>Черновик</option>
+        <select class="input_fly push_title gray add_company_type">
+            <option value="1">В Ротации</option>
+            <option value="2">Скрыто</option>
+            <option value="3">Черновик</option>
         </select>
         <div class="save_button">
             <div>
-                <a href="" class="thin">Сохранить</a>
+                <a onclick="create_company()" class="thin">Сохранить</a>
+            </div>
+        </div>
+    </div>
+    <div id="change-popup" class="white-popup mfp-hide">
+        <span class="catalog_subtitle">Изменение способа связи</span>
+        <span class="heading_lk_subtitle gray" style="margin: 0; padding-top: 0 !important;">Заполните название и способ связи для отображения этих данных в приложении.</span>
+        <span class="catalog_subtitle">Выберете способ</span>
+        <select class="input_fly push_title gray change_company_name">
+            <option value="1">Позвонить</option>
+            <option value="2">Whatsapp</option>
+            <option value="3">Почта</option>
+            <option value="4">Instagram</option>
+            <option value="5">Сайт</option>
+        </select>
+        <span class="catalog_subtitle">Контент</span>
+        <input type="text" class="form-control push_title input_fly change_company_content" placeholder="Телефон / Ссылка / Почта">
+        <span class="catalog_subtitle">Состояние</span>
+        <select class="input_fly push_title gray change_company_type">
+            <option value="1">В Ротации</option>
+            <option value="2">Скрыто</option>
+            <option value="3">Черновик</option>
+        </select>
+        <div class="save_button">
+            <div>
+                <a onclick="save_company()" class="thin">Сохранить</a>
             </div>
         </div>
     </div>
@@ -267,12 +258,256 @@
 $(document).ready(function() {
 
 
+    maginific()
+    get_company(platform)
+
+});
+
+
+
+function maginific() {
+
     $('.open-popup-link').magnificPopup({
         type: 'inline',
         midClick: true
     });
 
-});
+}
+
+
+
+
+function get_company(platform) {
+    $.ajax({
+        type: "GET",
+        url: domain,
+        data: "get_company_info=true&platform=" + platform,
+        success: function(msg) {
+            info = msg
+            company_first_block = '<div class="catalog_item"> <span class="catalog_subtitle">Название</span> <span class="catalog_subtitle">Ссылка</span> <span class="catalog_subtitle">Состояние</span> <span class="catalog_subtitle smart_actions_title">Действия</span> </div>'
+
+
+            for (var i = 0; i < info.length; i++) {
+                information = info[i].item
+                id = information.ID
+                name = information.Name
+                content = information.Content
+                status = information.Status
+                badge = ''
+                color = ''
+                text = ''
+
+                switch (name) {
+                    case 'Позвонить':
+                        badge = 'fas fa-phone'
+                        break
+                    case 'Whatsapp':
+                        badge = 'far fa-comment'
+                        break
+                    case 'Instagram':
+                        badge = 'fab fa-instagram'
+                        break
+                    case 'Сайт':
+                        badge = 'fas fa-link'
+                        break
+                    case 'Почта':
+                        badge = 'fas fa-link'
+                        break
+                    default:
+                        break
+                }
+
+                switch (status) {
+                    case 'draft':
+                        color = 'orange'
+                        text = 'Черновик'
+                        break
+                    case 'rotation':
+                        color = 'green'
+                        text = 'В Ротации'
+                        break
+                    case 'stoped':
+                        color = 'red'
+                        text = 'Отключен'
+                        break
+                    default:
+                        break
+
+                }
+
+                company_first_block += '<div class="catalog_item"> <span class="catalog_subtitle_inside"><i class="' + badge + '"></i>' + name + '</span> <span class="catalog_subtitle_inside thin">' + content + '</span> <span class="catalog_subtitle_inside ' + color + '">' + text + '</span> <div class="smart_actions smart_actions_title"> <a onclick="change_company(`' + id + '`, `' + name + '`, `' + status + '`, `' + content + '`)" href="#change-popup" class="open-popup-link blue"><i class="fas fa-edit"></i></a> <a onclick="delete_company(`' + id + '`)" class="red"><i class="fas fa-trash"></i></a> </div> </div>'
+
+            }
+
+            $(".first_block")[0].innerHTML = company_first_block;
+            maginific()
+        }
+    });
+}
+
+
+
+function change_company(id, name, type, content) {
+    $(".change_company_content")[0].value = content
+
+
+
+    switch (name) {
+        case 'Позвонить':
+            $(".change_company_name")[0].value = 1
+            break
+        case 'Whatsapp':
+            $(".change_company_name")[0].value = 2
+            break
+        case 'Instagram':
+            $(".change_company_name")[0].value = 3
+            break
+        case 'Сайт':
+            $(".change_company_name")[0].value = 4
+            break
+        case 'Почта':
+            $(".change_company_name")[0].value = 5
+            break
+        default:
+            break
+    }
+
+
+    switch (type) {
+        case 'draft':
+            $(".change_company_type")[0].value = 3
+            break
+        case 'rotation':
+            $(".change_company_type")[0].value = 1
+            break
+        case 'stoped':
+            $(".change_company_type")[0].value = 2
+            break
+        default:
+            break
+
+    }
+
+    company_change = id
+}
+
+
+function save_company() {
+
+
+    info_name = $(".change_company_name")[0].value
+    name = ''
+
+
+    switch (info_name) {
+        case '1':
+            name = 'Позвонить'
+            break
+        case '2':
+            name = 'Whatsapp'
+            break
+        case '3':
+            name = 'Почта'
+            break
+        case '4':
+            name = 'Instagram'
+            break
+        case '5':
+            name = 'Сайт'
+            break
+        default:
+            break
+    }
+
+    content = $(".change_company_content")[0].value
+
+    status = ""
+    switch ($(".change_company_type")[0].value) {
+        case '3':
+            status = "draft"
+            break
+        case '1':
+            status = "rotation"
+            break
+        case '2':
+            status = "stoped"
+            break
+        default:
+            break
+
+    }
+
+
+
+    $.ajax({
+        type: "GET",
+        url: domain,
+        data: "update_company_info=true&Title=" + encodeURI(name) + "&Status=" + status + "&ID=" + company_change+ "&Content=" + content,
+        success: function(msg) {
+            company_first_block = '<div class="catalog_item"> <span class="catalog_subtitle">Название</span> <span class="catalog_subtitle">Ссылка</span> <span class="catalog_subtitle">Состояние</span> <span class="catalog_subtitle smart_actions_title">Действия</span> </div><div class="loader">Loading...</div>'
+
+             $(".first_block")[0].innerHTML = company_first_block;
+
+            get_company(platform)
+            $.magnificPopup.close()
+        }
+    });
+
+
+}
+
+
+function create_company() {
+    info_name = $(".add_company_name")[0].value
+    content = $(".add_company_content")[0].value
+
+    status = ""
+    switch ($(".add_company_type")[0].value) {
+        case '3':
+            status = "draft"
+            break
+        case '1':
+            status = "rotation"
+            break
+        case '2':
+            status = "stoped"
+            break
+        default:
+            break
+
+    }
+
+    $.ajax({
+        type: "GET",
+        url: domain,
+        data: "create_company_info=true&Title=" + info_name + "&Status=" + status + "&Platform=" + platform + "&Content=" + content,
+        success: function(msg) {
+            get_company(platform)
+            $.magnificPopup.close()
+        }
+    });
+
+}
+
+
+
+
+
+function delete_company(id_delete) {
+
+    let delete_category_access = confirm("Вы точно хотите удалить?");
+
+    if (delete_category_access) {
+        $.ajax({
+            type: "GET",
+            url: domain,
+            data: "delete_company_info=true&ID=" + id_delete,
+            success: function(msg) {
+                get_company(platform)
+            }
+        });
+    }
+}
 </script>
 
 </html>
