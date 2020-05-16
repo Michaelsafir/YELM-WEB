@@ -9,6 +9,7 @@ domain = "http://95.213.140.10/yelm/admin/api/api.php";
 platform = "yelmio"
 categoty_change = ""
 company_change = ""
+company_basis_change = ""
 
 
 function get_profile() {

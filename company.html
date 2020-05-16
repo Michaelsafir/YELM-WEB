@@ -152,37 +152,15 @@
                         <a href="/create.html"><i class="fas fa-plus"></i></a>
                     </div>
                 </div>
-                <div class="catalog">
+                <div class="catalog second_block">
                     <div class="catalog_item">
                         <span class="catalog_subtitle">Название</span>
                         <span class="catalog_subtitle">Ссылка</span>
                         <span class="catalog_subtitle">Состояние</span>
                         <span class="catalog_subtitle smart_actions_title">Действия</span>
                     </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">Оферта</span>
-                        <span class="catalog_subtitle_inside thin">https://yelm.io/offer</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                        </div>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">Политика конфиденциальности</span>
-                        <span class="catalog_subtitle_inside thin">https://yelm.io/policy</span>
-                        <span class="catalog_subtitle_inside green">В Ротации</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                        </div>
-                    </div>
-                    <div class="catalog_item">
-                        <span class="catalog_subtitle_inside">Возврат средств</span>
-                        <span class="catalog_subtitle_inside thin">https://yelm.io/back</span>
-                        <span class="catalog_subtitle_inside orange">Черновик</span>
-                        <div class="smart_actions smart_actions_title">
-                            <a href="#" class="blue"><i class="fas fa-edit"></i></a>
-                        </div>
-                    </div>
+
+                    <div class="loader">Loading...</div>
                 </div>
                 <div class="pagination hide">
                     <div>
@@ -249,6 +227,26 @@
             </div>
         </div>
     </div>
+
+
+     <div id="change-basis-popup" class="white-popup mfp-hide">
+        <span class="catalog_subtitle basis_title">Изменение способа связи</span>
+        <span class="heading_lk_subtitle gray" style="margin: 0; padding-top: 0 !important;">Заполните название и способ связи для отображения этих данных в приложении.</span>
+        <span class="catalog_subtitle">Контент</span>
+        <input type="text" class="form-control push_title input_fly change_company_basis_content" placeholder="Ссылка">
+        <span class="catalog_subtitle">Состояние</span>
+        <select class="input_fly push_title gray change_company_basis_type">
+            <option value="1">В Ротации</option>
+            <option value="2">Скрыто</option>
+            <option value="3">Черновик</option>
+        </select>
+        <div class="save_button">
+            <div>
+                <a onclick="save_company_basis()" class="thin">Сохранить</a>
+            </div>
+        </div>
+    </div>
+
 </body>
 <script type="text/javascript" src="script/app.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
@@ -260,6 +258,7 @@ $(document).ready(function() {
 
     maginific()
     get_company(platform)
+    get_company_basis(platform)
 
 });
 
@@ -347,6 +346,58 @@ function get_company(platform) {
 
 
 
+
+
+function get_company_basis(platform) {
+    $.ajax({
+        type: "GET",
+        url: domain,
+        data: "get_company_info_basis=true&platform=" + platform,
+        success: function(msg) {
+            info = msg
+            company_first_block = '<div class="catalog_item"> <span class="catalog_subtitle">Название</span> <span class="catalog_subtitle">Ссылка</span> <span class="catalog_subtitle">Состояние</span> <span class="catalog_subtitle smart_actions_title">Действия</span> </div>'
+
+
+            for (var i = 0; i < info.length; i++) {
+                information = info[i].item
+                id = information.ID
+                name = information.Name
+                content = information.Content
+                status = information.Status
+                color = ''
+                text = ''
+
+                switch (status) {
+                    case 'draft':
+                        color = 'orange'
+                        text = 'Черновик'
+                        break
+                    case 'rotation':
+                        color = 'green'
+                        text = 'В Ротации'
+                        break
+                    case 'stoped':
+                        color = 'red'
+                        text = 'Отключен'
+                        break
+                    default:
+                        break
+
+                }
+
+                company_first_block += '<div class="catalog_item"> <span class="catalog_subtitle_inside">' + name + '</span> <span class="catalog_subtitle_inside thin">' + content + '</span> <span class="catalog_subtitle_inside ' + color + '">' + text + '</span> <div class="smart_actions smart_actions_title"> <a onclick="change_company_basis(`' + id + '`, `' + name + '`, `' + status + '`, `' + content + '`)" href="#change-basis-popup" class="open-popup-link blue"><i class="fas fa-edit"></i></a> </div> </div>'
+
+            }
+
+            $(".second_block")[0].innerHTML = company_first_block;
+            maginific()
+        }
+    });
+}
+
+
+
+
 function change_company(id, name, type, content) {
     $(".change_company_content")[0].value = content
 
@@ -389,6 +440,75 @@ function change_company(id, name, type, content) {
     }
 
     company_change = id
+}
+
+
+
+
+
+function change_company_basis(id, name, type, content) {
+    $(".change_company_basis_content")[0].value = content
+    $(".basis_title")[0].innerHTML = name
+
+    switch (type) {
+        case 'draft':
+            $(".change_company_basis_type")[0].value = 3
+            break
+        case 'rotation':
+            $(".change_company_basis_type")[0].value = 1
+            break
+        case 'stoped':
+            $(".change_company_basis_type")[0].value = 2
+            break
+        default:
+            break
+
+    }
+
+    company_basis_change = id
+}
+
+
+
+function save_company_basis() {
+
+
+
+    content = $(".change_company_basis_content")[0].value
+
+    status = ""
+    switch ($(".change_company_basis_type")[0].value) {
+        case '3':
+            status = "draft"
+            break
+        case '1':
+            status = "rotation"
+            break
+        case '2':
+            status = "stoped"
+            break
+        default:
+            break
+
+    }
+
+
+
+    $.ajax({
+        type: "GET",
+        url: domain,
+        data: "update_company_basis_info=true&Status=" + status + "&ID=" + company_basis_change+ "&Content=" + content,
+        success: function(msg) {
+            company_first_block = '<div class="catalog_item"> <span class="catalog_subtitle">Название</span> <span class="catalog_subtitle">Ссылка</span> <span class="catalog_subtitle">Состояние</span> <span class="catalog_subtitle smart_actions_title">Действия</span> </div><div class="loader">Loading...</div>'
+
+             $(".second_block")[0].innerHTML = company_first_block;
+
+            get_company_basis(platform)
+            $.magnificPopup.close()
+        }
+    });
+
+
 }
 
 
