@@ -6,6 +6,7 @@ window.onload = function() {
 
 // settings
 domain = "http://95.213.140.10/yelm/admin/api/api.php";
+domain_image = "http://95.213.140.10/yelm/admin/api/images.php";
 platform = "yelmio"
 categoty_change = ""
 company_change = ""

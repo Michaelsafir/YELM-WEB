@@ -35,7 +35,7 @@
             </div>
             <div class="YELM_header_2">
                 <div>
-                    <a href="#" class="gray">Сафир Михаил Дмитриевич</a>
+                    <a href="#" class="gray username">Сафир Михаил Дмитриевич</a>
                     <i class="fas fa-chevron-down"></i>
                 </div>
             </div>
@@ -135,70 +135,45 @@
                 <div class="add_item">
                     <div>
                         <span class="catalog_subtitle">Название</span>
-                        <input type="text" class="form-control push_title input_fly" placeholder="Название товара">
+                        <input type="text" class="form-control push_title input_fly item_name" placeholder="Название товара">
                         <span class="catalog_subtitle">Категория</span>
-                        <select class="input_fly push_title gray">
-                            <option>Выбрать</option>
-                            <option>Бестселлер</option>
-                            <option>Уход за лицом</option>
+                        <select class="input_fly push_title gray catalog_list">
                         </select>
                         <span class="catalog_subtitle">Цена товара</span>
-                        <input type="text" class="form-control push_title input_fly" placeholder="2000 руб.">
+                        <input type="text" class="form-control push_title input_fly item_price" placeholder="2000 руб.">
                         <div class="characteristics">
                             <span class="catalog_subtitle">Фотографии</span>
-                            <a><i class="fas fa-plus gray"></i></a>
+                            <a onclick="load_image()"><i class="fas fa-plus gray"></i></a>
                         </div>
                         <span class="heading_lk_subtitle gray" style="margin: 0;">Первая фотография будет на главной странице. Остальные будут вложены в товар.</span>
                         <div class="item_images">
-                            <div class="content_image_item">
-                                <img src="images/cream2.png">
-                                <div class="overlay_item">
-                                    <div class="text_item">
-                                        <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content_image_item">
-                                <img src="images/cream3.png">
-                                <div class="overlay_item">
-                                    <div class="text_item">
-                                        <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="content_image_item">
-                                <img src="images/cream4.png">
-                                <div class="overlay_item">
-                                    <div class="text_item">
-                                        <a href="#" class="red"><i class="fas fa-trash"></i></a>
-                                    </div>
-                                </div>
-                            </div>
+                            
+
                         </div>
                         <span class="catalog_subtitle">Описание товара <span class="thin">(0/512)</span></span>
-                        <textarea class="push_textarea input_fly" placeholder="Ваше сообщение для пользователей"></textarea>
+                        <textarea class="push_textarea input_fly item_about" placeholder="Ваше сообщение для пользователей"></textarea>
                         <span class="catalog_subtitle">Статус</span>
                         <div class="item_type">
-                            <button class="item_one_type pushed">Черновик</button>
-                            <button class="item_two_type">В Ротации</button>
-                            <button class="item_three_type">Нет в наличии</button>
+                            <button onclick="item_type('draft')" class="draft item_one_type pushed">Черновик</button>
+                            <button onclick="item_type('rotation')" class="item_two_type rotation">В Ротации</button>
+                            <button onclick="item_type('not_avalible')" class="item_three_type not_avalible">Нет в наличии</button>
                         </div>
                         <div class="characteristics">
                             <span class="catalog_subtitle">Характеристики</span>
-                            <a><i class="fas fa-plus gray"></i></a>
+                            <a onclick="add_line()"><i class="fas fa-plus gray"></i></a>
                         </div>
                         <div class="params">
                             <div class="param">
-                                <input type="text" class="form-control " placeholder="Название">
+                                <input type="text" class="form-control param_one" placeholder="Название">
                                 <span class="catalog_subtitle"> : </span>
-                                <input type="text" class="form-control " placeholder="Параметр">
-                                <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                                <input type="text" class="form-control param_two " placeholder="Параметр">
+                                <a onclick="$(this).parent().remove();" class="red"><i class="fas fa-trash"></i></a>
                             </div>
                             <div class="param">
                                 <input type="text" class="form-control " placeholder="Название">
                                 <span class="catalog_subtitle"> : </span>
                                 <input type="text" class="form-control " placeholder="Параметр">
-                                <a href="#" class="red"><i class="fas fa-trash"></i></a>
+                                <a onclick="$(this).parent().remove();" class="red"><i class="fas fa-trash"></i></a>
                             </div>
                         </div>
                     </div>
@@ -208,16 +183,14 @@
                                 <img src="images/solo.jpg">
                             </div>
                             <div class="preview_text">
-                                <h3 class="heading_lk">Ваше приглашение в премиум-класс</h3>
+                                <h3 class="heading_lk pre_name">Название товара</h3>
                                 <div class="item_text_preview">
-                                    <span class="heading_lk_subtitle gray">Приобщайтесь к здоровому питанию вместе с Solo YOU — первой в России программе класса «доступный премиум». Это выверенный до мелочей сбалансированный рацион от известного диетолога Маргариты Королевой. Помогает снизить лишний вес и поддерживать форму.</span>
-                                    <span class="heading_lk_subtitle gray">Вы насладитесь яркими салатами, супами, мясными и рыбными блюдами, легкими десертами. Вместе с ежедневным набором вас ждет первоклассное обслуживание и гибкая бесплатная доставка.</span>
-                                    <span class="heading_lk_subtitle gray">Мы разработали универсальное меню для разнообразного полноценного питания. В течение 12 дней ни одно блюдо в программе не повторяется.</span>
+                                    <span class="heading_lk_subtitle gray pre_about">Тут будет текст Вашей статьи, вы можете изменить его в любой момент. Заолните данные слева и Вы увидите как они будут отображаться в приложении</span>
                                 </div>
                             </div>
                             <div class="price_preview">
                                 <div class="over_data">
-                                    <h3 class="heading_lk price">₽ 1 500</h3>
+                                    <h3 class="heading_lk price pre_price">₽ 1 500</h3>
                                     <div class="add_preview"><span>Добавить</span></div>
                                 </div>
                             </div>
@@ -234,10 +207,121 @@
             <a href="https://yelm.io">Правовая информация</a>
         </div>
     </footer>
+    <input style="display: none" type="file" accept="image/*" multiple="" id="images_open" onchange="handleFiles(this.files)" />
 </body>
 <script type="text/javascript" src="script/app.js"></script>
 <script type="text/javascript" src="script/popup.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/fontawesome/js/all.js">
+<script type="text/javascript">
+$(document).ready(function() {
+
+    get_categories(platform)
+
+});
+
+function load_image() {
+    $("#images_open").click()
+}
+
+
+function handleFiles(files, where) {
+    console.log(files)
+    for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+
+        var $data = new FormData();
+        $data.append('title', file.name);
+        $data.append('file', file);
+        $data.append('platform', platform);
+
+        $(".item_images")[0].innerHTML += '<div class="loader_small">Loading...</div>'
+
+          $.ajax({
+                type: 'POST',
+                url: domain_image,
+                data: $data,
+                success: function(response) {
+                    console.log(response)
+
+
+
+                    $(".loader_small").remove()
+
+
+
+                    $(".item_images")[0].innerHTML += '<div class="content_image_item"> <img src="'+response+'"> <div class="overlay_item"> <div class="text_item"> <a onclick="$(this).parent().parent().parent().remove();" class="red"><i class="fas fa-trash"></i></a> </div> </div> </div>'
+                },
+                error: function(response) {
+                    console.log(response)
+                },
+                processData: false,
+                contentType: false
+            });
+
+
+    }
+}
+
+function add_line() {
+    $(".params")[0].innerHTML += '<div class="param"> <input type="text" class="form-control " placeholder="Название"> <span class="catalog_subtitle"> : </span> <input type="text" class="form-control " placeholder="Параметр"> <a onclick="$(this).parent().remove();" class="red"><i class="fas fa-trash"></i></a> </div>'
+}
+
+
+$('.item_name').bind('input propertychange', function() {
+    var text = this.value
+
+    $(".pre_name")[0].innerHTML = text
+});
+
+
+$('.item_price').bind('input propertychange', function() {
+    var text = this.value
+
+    $(".pre_price")[0].innerHTML = "₽ " + text
+});
+
+
+$('.item_about').bind('input propertychange', function() {
+    var text = this.value
+    text = text.replace(/\r?\n/g, '<br />');
+
+
+    $(".pre_about")[0].innerHTML = text
+});
+
+function get_categories(platform) {
+    $.ajax({
+        type: "GET",
+        url: domain,
+        data: "get_categories=true&platform=" + platform,
+        success: function(msg) {
+            categories = msg
+            categories_block = ''
+
+            for (var i = 0; i < categories.length; i++) {
+                category = categories[i].item
+                id = category.ID
+                count = categories[i].item_count
+                status = category.Status
+                color = ''
+                text = ''
+
+
+                categories_block += '<option>' + category.Name + '</option>'
+
+            }
+
+            $(".catalog_list")[0].innerHTML = categories_block;
+
+        }
+    });
+}
+
+function item_type(type) {
+    $(".pushed").removeClass("pushed")
+    $("." + type + "").addClass("pushed")
+}
+</script>
 
 </html>

@@ -18,6 +18,12 @@ span {
     font-weight: 300;
 }
 
+textarea {
+    font-family: 'San Francisco Rounded' !important;
+    font-weight: 300 !important;
+}
+
+
 .heading_lk {
     margin: 0 10px;
     font-size: 24px;
@@ -292,7 +298,7 @@ footer {
 
 
 .leftbar {
-    height: 810px;
+    height: 830px;
     margin: 10px 10px;
     padding: 20px;
     border-radius: 10px;
@@ -1073,7 +1079,7 @@ i {
 }
 
 .item_images img {
-    object-fit: contain;
+    object-fit: cover;
     width: 100px;
     height: 100px;
     border-radius: 10px;
@@ -1380,6 +1386,73 @@ i {
   content: '';
 }
 .loader:after {
+  background: #fff;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+.loader_small {
+  font-size: 10px;
+  margin: 10px auto;
+  text-indent: -9999em;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #d8d8dd;
+  background: -moz-linear-gradient(left, #d8d8dd 10%, rgba(216,216,221, 0) 42%);
+  background: -webkit-linear-gradient(left, #d8d8dd 10%, rgba(216,216,221, 0) 42%);
+  background: -o-linear-gradient(left, #d8d8dd 10%, rgba(216,216,221, 0) 42%);
+  background: -ms-linear-gradient(left, #d8d8dd 10%, rgba(216,216,221, 0) 42%);
+  background: linear-gradient(to right, #d8d8dd 10%, rgba(216,216,221, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader_small:before {
+  width: 50%;
+  height: 50%;
+  background: #d8d8dd;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader_small:after {
   background: #fff;
   width: 75%;
   height: 75%;
